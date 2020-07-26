@@ -1,3 +1,4 @@
+/// The JS interop library itself.
 library dygraph;
 
 export 'src/annotation.dart';

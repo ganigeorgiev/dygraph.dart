@@ -1,7 +1,7 @@
 Dygraph (Dart)
 ================================================================================
 
-Dart JS interop for [Dygraph v2+](http://dygraphs.com/) - fast, flexible open source JavaScript charting library.
+Dart JS interop for [Dygraph v2+](https://github.com/danvk/dygraphs) - fast, flexible open source JavaScript charting library.
 
 
 ## Usage
