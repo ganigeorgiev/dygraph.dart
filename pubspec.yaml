@@ -1,7 +1,8 @@
 name: dygraph
-version: 0.1.1
+version: 0.1.1+1
 description: Dart JS interop for Dygraph - fast, flexible open source JavaScript charting library.
 
+homepage: https://github.com/ganigeorgiev/dygraph.dart
 repository: https://github.com/ganigeorgiev/dygraph.dart
 
 environment:
