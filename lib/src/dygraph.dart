@@ -17,7 +17,7 @@ import 'options.dart';
 @JS()
 class Dygraph {
   external factory Dygraph(
-    HtmlElement div,
+    Element? div,
     dynamic /* string (URL of CSV or CSV), GViz DataTable or 2D Array */ file, [
     DygraphOptions options,
   ]);

@@ -1,3 +1,7 @@
+## 1.0.0
+
+* Null-safety migration
+
 ## 0.1.1+1
 
 * Added homepage to pubspec.yaml
