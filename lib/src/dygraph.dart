@@ -17,9 +17,9 @@ import 'options.dart';
 @JS()
 class Dygraph {
   external factory Dygraph(
-    HtmlElement div,
+    Element? div,
     dynamic /* string (URL of CSV or CSV), GViz DataTable or 2D Array */ file, [
-    DygraphOptions options,
+    DygraphOptions? options,
   ]);
 
   // Used for initializing annotation CSS rules only once.
@@ -150,9 +150,9 @@ class Dygraph {
     num min,
     num max,
     num pixels, [
-    Function(String v) opts,
-    Dygraph dygraph,
-    List vals,
+    Function(String v)? opts,
+    Dygraph? dygraph,
+    List? vals,
   ]);
 
   /// Numeric values ticker function.
@@ -160,9 +160,9 @@ class Dygraph {
     num min,
     num max,
     num pixels, [
-    Function(String v) opts,
-    Dygraph dygraph,
-    List vals,
+    Function(String v)? opts,
+    Dygraph? dygraph,
+    List? vals,
   ]);
 
   /// Date values ticker function.
@@ -170,9 +170,9 @@ class Dygraph {
     num min,
     num max,
     num pixels, [
-    Function(String v) opts,
-    Dygraph dygraph,
-    List vals,
+    Function(String v)? opts,
+    Dygraph? dygraph,
+    List? vals,
   ]);
 
   /// Adjusts the number of points in the rolling average.
@@ -204,7 +204,7 @@ class Dygraph {
   external List getLabels();
 
   /// Returns the current value for an option, as set in the constructor or via [updateOptions].
-  external dynamic getOption(String name, [String optSeriesName]);
+  external dynamic getOption(String name, [String? optSeriesName]);
 
   /// Returns a few attributes of a series, i.e. its color, its visibility,
   /// which axis it's assigned to, and its column in the original data.
@@ -241,7 +241,7 @@ class Dygraph {
   /// The zoomed status for an axis is set whenever a user zooms using the mouse
   /// or when the dateWindow or valueRange are updated. Double-clicking or calling
   /// `resetZoom()` resets the zoom status for the chart.
-  external bool isZoomed([String axis]);
+  external bool isZoomed([String? axis]);
 
   /// Returns information about the Dygraph object, including its containing ID.
   @override
@@ -269,7 +269,7 @@ class Dygraph {
   ///
   /// This is far more efficient than destroying and re-instantiating a
   /// Dygraph, since it doesn't have to reparse the underlying data.
-  external void resize([num width, num height]);
+  external void resize([num? width, num? height]);
 
   /// Returns the current rolling period, as set by the user or an option.
   external int rollPeriod();
@@ -278,7 +278,7 @@ class Dygraph {
   /// See dygraphs.com/annotations.html for more info on how to use annotations.
   external void setAnnotations(
     List<DygraphAnnotation> annotations, [
-    bool suppressDraw,
+    bool? suppressDraw,
   ]);
 
   /// Manually set the selected points and display information about them in the
@@ -287,7 +287,7 @@ class Dygraph {
   ///
   /// To set a selected series but not a selected point, call [setSelection] with
   /// `row=false` and the selected series name.
-  external void setSelection(dynamic row, [String seriesName, bool locked]);
+  external void setSelection(dynamic row, [String? seriesName, bool? locked]);
 
   /// Changes the visibility of one or more series.
   ///
@@ -304,18 +304,18 @@ class Dygraph {
   ///
   /// Note: use [toDataXCoord] instead of [toDataCoords(x, null)] and use
   /// [toDataYCoord] instead of [toDataCoords(null, y, axis)].
-  external List toDataCoords([num x, num y, num axis]);
+  external List toDataCoords([num? x, num? y, num? axis]);
 
   /// Convert from canvas/div x coordinate to data coordinate.
   ///
   /// If [x] is null, this returns `null`.
-  external num toDataXCoord([num x]);
+  external num toDataXCoord([num? x]);
 
   /// Convert from canvas/div y coord to value.
   ///
   /// If [y] is `null`, this returns `null`.
   /// if axis is `null`, this uses the first axis.
-  external num toDataYCoord([num y, num axis]);
+  external num toDataYCoord([num? y, num? axis]);
 
   /// Convert from data coordinates to canvas/div X/Y coordinates.
   /// If specified, do this conversion for the coordinate system of a particular
@@ -324,19 +324,19 @@ class Dygraph {
   ///
   /// Note: use [toDomXCoord] instead of [toDomCoords(x, null)] and use
   /// [toDomYCoord] instead of [toDomCoords(null, y, axis)].
-  external List toDomCoords([num x, num y, num axis]);
+  external List toDomCoords([num? x, num? y, num? axis]);
 
   /// Convert from data x coordinates to canvas/div X coordinate.
   /// If specified, do this conversion for the coordinate system of a particular axis.
   ///
   /// Returns a single value or `null` if x is `null`.
-  external num toDomXCoord([num x]);
+  external num toDomXCoord([num? x]);
 
   /// Convert from data x coordinates to canvas/div Y coordinate and optional
   /// axis. Uses the first axis by default.
   ///
   /// Returns a single value or `null` if y is `null`.
-  external num toDomYCoord([num y, num axis]);
+  external num toDomYCoord([num? y, num? axis]);
 
   /// Converts an x value to a percentage from the left to the right of
   /// the drawing area.
@@ -347,7 +347,7 @@ class Dygraph {
   /// values can fall outside the canvas.
   ///
   /// If x is `null`, this returns `null`.
-  external num toPercentXCoord([num x]);
+  external num toPercentXCoord([num? x]);
 
   /// Converts a y for an axis to a percentage from the top to the
   /// bottom of the drawing area.
@@ -359,7 +359,7 @@ class Dygraph {
   ///
   /// If y is `null`, this returns `null`.
   /// if axis is `null`, this uses the first axis.
-  external num toPercentYCoord([num y, num axis]);
+  external num toPercentYCoord([num? y, num? axis]);
 
   /// Changes various properties of the graph. These can include:
   /// - data: changes the source data for the graph
@@ -367,7 +367,7 @@ class Dygraph {
   ///
   /// There's a huge variety of options that can be passed to this method.
   /// For a full list, see http://dygraphs.com/options.html.
-  external void updateOptions(DygraphOptions options, [bool blockRedraw]);
+  external void updateOptions(DygraphOptions options, [bool? blockRedraw]);
 
   /// Returns a boolean array of visibility statuses.
   external List visibility();
@@ -394,7 +394,7 @@ class Dygraph {
   /// If called with no arguments, returns the range of the first axis.
   ///
   /// Returns a two-element array: [bottom, top].
-  external List yAxisRange([num idx]);
+  external List yAxisRange([num? idx]);
 
   /// Returns the currently-visible y-ranges for each axis.
   /// This can be affected by zooming, panning, calls to [updateOptions], etc.

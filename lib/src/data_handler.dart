@@ -27,7 +27,7 @@ class DygraphDataHandler {
     // Index of the series to extract. All other series should be ignored.
     int seriesIndex, [
     // Dygraph options.
-    DygraphOptions options,
+    DygraphOptions? options,
   ]);
 
   /// Converts a series to a Point array.  The resulting point array must be
@@ -52,7 +52,7 @@ class DygraphDataHandler {
     // The number of points over which to average the data.
     int rollPeriod, [
     // Dygraph options.
-    DygraphOptions options,
+    DygraphOptions? options,
   ]);
 
   /// Computes the range of the data series (including confidence intervals).
@@ -64,7 +64,7 @@ class DygraphDataHandler {
     // The x-value range to display with the format: [min, max].
     List dateWindow, [
     // The dygraph options.
-    DygraphOptions options,
+    DygraphOptions? options,
   ]);
 
   /// Callback called for each series after the layouting data has been

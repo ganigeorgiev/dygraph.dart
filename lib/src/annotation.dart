@@ -12,22 +12,22 @@ import 'typedefs.dart';
 @anonymous
 class DygraphAnnotation {
   external factory DygraphAnnotation({
-    String series,
+    String? series,
     dynamic x,
-    String shortText,
-    String text,
-    String icon,
-    num width,
-    num height,
-    String cssClass,
-    num tickHeight,
-    num tickWidth,
-    String tickColor,
-    bool attachAtBottom,
-    AnnotationCallbackFunc clickHandler,
-    AnnotationCallbackFunc mouseOverHandler,
-    AnnotationCallbackFunc mouseOutHandler,
-    AnnotationCallbackFunc dblClickHandler,
+    String? shortText,
+    String? text,
+    String? icon,
+    num? width,
+    num? height,
+    String? cssClass,
+    num? tickHeight,
+    num? tickWidth,
+    String? tickColor,
+    bool? attachAtBottom,
+    AnnotationCallbackFunc? clickHandler,
+    AnnotationCallbackFunc? mouseOverHandler,
+    AnnotationCallbackFunc? mouseOutHandler,
+    AnnotationCallbackFunc? dblClickHandler,
   });
 
   /// The name of the series to which the annotated point belongs.

@@ -12,7 +12,7 @@ import 'dygraph.dart';
 class DygraphSynchronize {
   external factory DygraphSynchronize(
     List<Dygraph> dygraphs, [
-    DygraphSynchronizeOptions options,
+    DygraphSynchronizeOptions? options,
   ]);
 
   external List<Dygraph> get dygraphs;

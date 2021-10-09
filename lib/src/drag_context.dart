@@ -13,25 +13,25 @@ class DygraphDragContext {
     bool isZooming = false,
     bool isPanning = false,
     bool is2DPan = false,
-    num dragStartX,
-    num dragStartY,
-    num dragEndX,
-    num dragEndY,
-    num dragDirection,
-    num prevEndX,
-    num prevEndY,
-    num prevDragDirection,
+    num? dragStartX,
+    num? dragStartY,
+    num? dragEndX,
+    num? dragEndY,
+    num? dragDirection,
+    num? prevEndX,
+    num? prevEndY,
+    num? prevDragDirection,
     bool cancelNextDblclick = false,
-    num initialLeftmostDate,
-    num xUnitsPerPixel,
-    num dateRange,
+    num? initialLeftmostDate,
+    num? xUnitsPerPixel,
+    num? dateRange,
     num px = 0,
     num py = 0,
-    List boundedDates,
-    List boundedValues,
-    DygraphIframeTarp tarp,
-    InteractionModelFunc initializeMouseDown,
-    Function destroy,
+    List? boundedDates,
+    List? boundedValues,
+    DygraphIframeTarp? tarp,
+    InteractionModelFunc? initializeMouseDown,
+    Function? destroy,
   });
 
   /// Tracks whether the mouse is down right now
@@ -169,7 +169,7 @@ class DygraphDragContext {
 @JS()
 @anonymous
 class DygraphIframeTarp {
-  external factory DygraphIframeTarp({List tarps});
+  external factory DygraphIframeTarp({List? tarps});
 
   /// Tracks whether the mouse is down right now
   ///

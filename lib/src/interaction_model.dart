@@ -10,20 +10,20 @@ import 'typedefs.dart';
 @anonymous
 class DygraphInteractionModel {
   external factory DygraphInteractionModel({
-    bool willDestroyContextMyself,
-    InteractionModelFunc click,
-    InteractionModelFunc dblclick,
-    InteractionModelFunc mousedown,
-    InteractionModelFunc mouseup,
-    InteractionModelFunc mousemove,
-    InteractionModelFunc mouseenter,
-    InteractionModelFunc mouseleave,
-    InteractionModelFunc mousewheel,
-    InteractionModelFunc touchstart,
-    InteractionModelFunc touchmove,
-    InteractionModelFunc touchend,
-    InteractionModelFunc keydown,
-    InteractionModelFunc keyup,
+    bool? willDestroyContextMyself,
+    InteractionModelFunc? click,
+    InteractionModelFunc? dblclick,
+    InteractionModelFunc? mousedown,
+    InteractionModelFunc? mouseup,
+    InteractionModelFunc? mousemove,
+    InteractionModelFunc? mouseenter,
+    InteractionModelFunc? mouseleave,
+    InteractionModelFunc? mousewheel,
+    InteractionModelFunc? touchstart,
+    InteractionModelFunc? touchmove,
+    InteractionModelFunc? touchend,
+    InteractionModelFunc? keydown,
+    InteractionModelFunc? keyup,
   });
 
   external bool get willDestroyContextMyself;

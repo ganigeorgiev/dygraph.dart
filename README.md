@@ -10,7 +10,7 @@ Dart JS interop for [Dygraph v2+](https://github.com/danvk/dygraphs) - fast, fle
 
     ```yaml
     dependencies:
-      dygraph: ^0.1.0
+      dygraph: ^1.0.0
     ```
 
 2. Load the latest Dygraph source (js and css) in your html layout:

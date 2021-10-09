@@ -14,7 +14,7 @@ import 'typedefs.dart';
 @JS('Dygraph.Plugins.Crosshair')
 class DygraphCrosshair {
   external factory DygraphCrosshair([
-    DygraphCrosshairOptions options,
+    DygraphCrosshairOptions? options,
   ]);
 
   external DygraphCrosshairOptions get options;
@@ -40,8 +40,8 @@ class DygraphCrosshair {
 @anonymous
 class DygraphCrosshairOptions {
   external factory DygraphCrosshairOptions({
-    String direction,
-    String color,
+    String? direction,
+    String? color,
   });
 
   /// Valid values are: `'vertical'`, `'horizontal'` or `'both'`

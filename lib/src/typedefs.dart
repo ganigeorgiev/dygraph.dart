@@ -127,7 +127,7 @@ typedef TickerFunc = List Function(
   num pixels, [
   Function(String v) opts,
   Dygraph dygraph,
-  List vals,
+  List? vals,
 ]);
 
 typedef ValueFormatterFunc = dynamic Function(
@@ -137,9 +137,9 @@ typedef ValueFormatterFunc = dynamic Function(
   // It returns per-axis values for the option when available.
   dynamic opts,
   // The name of the series from which the point came, e.g. 'X', 'Y', 'A', etc.
-  String seriesName,
+  String? seriesName,
   // The dygraph object for which the formatting is being done
-  Dygraph dygraph,
+  Dygraph? dygraph,
   // The row of the data from which this point comes. g.getValue(row, 0) will return the x-value for this point.
   num row,
   // The column of the data from which this point comes. g.getValue(row, col) will return the original y-value for this point.

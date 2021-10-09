@@ -9,13 +9,13 @@ import 'dygraph.dart';
 @anonymous
 class DygraphLegendFormatterSeries {
   external factory DygraphLegendFormatterSeries({
-    String dashHTML,
-    String yHTML,
-    String label,
-    String labelHTML,
-    bool isVisible,
-    bool isHighlighted,
-    String color,
+    String? dashHTML,
+    String? yHTML,
+    String? label,
+    String? labelHTML,
+    bool? isVisible,
+    bool? isHighlighted,
+    String? color,
   });
 
   external String get dashHTML;
@@ -44,10 +44,10 @@ class DygraphLegendFormatterSeries {
 @anonymous
 class DygraphLegendFormatterData {
   external factory DygraphLegendFormatterData({
-    Dygraph dygraph,
-    String xHTML,
-    num x,
-    List<DygraphLegendFormatterSeries> series,
+    Dygraph? dygraph,
+    String? xHTML,
+    num? x,
+    List<DygraphLegendFormatterSeries>? series,
   });
 
   external Dygraph get dygraph;

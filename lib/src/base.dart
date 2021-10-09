@@ -11,10 +11,10 @@ import 'options.dart';
 @anonymous
 class DygraphArea {
   external factory DygraphArea({
-    num x,
-    num y,
-    num w,
-    num h,
+    num? x,
+    num? y,
+    num? w,
+    num? h,
   });
 
   external num get x;
@@ -34,9 +34,9 @@ class DygraphArea {
 @anonymous
 class DygraphAxes {
   external factory DygraphAxes({
-    DygraphOptions x,
-    DygraphOptions y,
-    DygraphOptions y2,
+    DygraphOptions? x,
+    DygraphOptions? y,
+    DygraphOptions? y2,
   });
 
   external DygraphOptions get x;
@@ -53,11 +53,11 @@ class DygraphAxes {
 @anonymous
 class DygraphPropertiesForSeries {
   external factory DygraphPropertiesForSeries({
-    String name,
-    int column,
-    bool visible,
-    String color,
-    int axis,
+    String? name,
+    int? column,
+    bool? visible,
+    String? color,
+    int? axis,
   });
 
   external String get name;
@@ -80,9 +80,9 @@ class DygraphPropertiesForSeries {
 @anonymous
 class DygraphClosestPointResult {
   external factory DygraphClosestPointResult({
-    num row,
-    String seriesName,
-    DygraphPointType point,
+    num? row,
+    String? seriesName,
+    DygraphPointType? point,
   });
 
   external num get row;
@@ -99,20 +99,20 @@ class DygraphClosestPointResult {
 @anonymous
 class DygraphPointType {
   external factory DygraphPointType({
-    num idx,
-    String name,
-    num canvasx,
-    num canvasy,
-    num x,
-    num xval,
-    num y_bottom,
-    num y,
-    num y_stacked,
-    num y_top,
-    num yval_minus,
-    num yval,
-    num yval_plus,
-    num yval_stacked,
+    num? idx,
+    String? name,
+    num? canvasx,
+    num? canvasy,
+    num? x,
+    num? xval,
+    num? y_bottom,
+    num? y,
+    num? y_stacked,
+    num? y_top,
+    num? yval_minus,
+    num? yval,
+    num? yval_plus,
+    num? yval_stacked,
   });
 
   external num get idx;
